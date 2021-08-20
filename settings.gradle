@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Theatre43"
 include ':app'
+include ':domain'
