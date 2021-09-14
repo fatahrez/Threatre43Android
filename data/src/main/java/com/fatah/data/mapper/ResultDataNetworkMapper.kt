@@ -1,11 +1,11 @@
 package com.fatah.data.mapper
 
 import com.fatah.data.model.ResultData
-import com.fatah.domain.entity.ResultsEntity
+import com.fatah.data.remote.models.ResultNetwork
 import javax.inject.Inject
 
-class ResultEntityDataMapper @Inject constructor():Mapper<ResultsEntity, ResultData> {
-    override fun from(e: ResultData): ResultsEntity = ResultsEntity(
+class ResultDataNetworkMapper @Inject constructor(): Mapper<ResultData, ResultNetwork> {
+    override fun from(e: ResultNetwork): ResultData = ResultData(
         e.adult ?: false,
         e.backdropPath ?: "",
         e.genreIds ?: ArrayList(),
@@ -20,7 +20,7 @@ class ResultEntityDataMapper @Inject constructor():Mapper<ResultsEntity, ResultD
         e.voteCount ?: 0
     )
 
-    override fun to(t: ResultsEntity): ResultData = ResultData(
+    override fun to(t: ResultData): ResultNetwork = ResultNetwork(
         t.adult ?: false,
         t.backdropPath ?: "",
         t.genreIds ?: ArrayList(),

@@ -14,3 +14,5 @@ data class ResultData(
     val voteAverage: Double,
     val voteCount: Number
 )
+
+//fun ResultDataResponse.toEntity
