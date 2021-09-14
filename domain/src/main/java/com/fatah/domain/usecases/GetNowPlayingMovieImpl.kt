@@ -7,5 +7,6 @@ import javax.inject.Inject
 class GetNowPlayingMovieImpl @Inject constructor(
     private val theatreRepository: TheatreRepository
 ): GetNowPlayingMovieTask {
-    override suspend fun invoke(api_key: String) = theatreRepository.getMovieResults(api_key)
+    override suspend fun invoke(api_key: String, getFromRemote: Boolean) = theatreRepository
+        .getMovieResults(api_key, getFromRemote)
 }
