@@ -29,7 +29,6 @@ class TheatreRepositoryImpl @Inject constructor(
                             for (movie in remoteData.results) {
                                 movieResultsList.add(movieMapper.from(movieNetworkMapper.from(movie)))
                             }
-
                             Result.Success(ArrayList(movieResultsList))
                         } else {
                             Result.Success(null)

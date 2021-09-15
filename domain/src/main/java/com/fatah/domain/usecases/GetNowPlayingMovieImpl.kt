@@ -1,6 +1,5 @@
 package com.fatah.domain.usecases
 
-import com.fatah.domain.entity.ResultsEntity
 import com.fatah.domain.repository.TheatreRepository
 import javax.inject.Inject
 
